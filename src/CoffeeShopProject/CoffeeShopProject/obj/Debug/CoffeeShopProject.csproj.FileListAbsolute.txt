@@ -1,0 +1,13 @@
+D:\QuanLyQuanCafe\src\CoffeeShopProject\CoffeeShopProject\bin\Debug\CoffeeShopProject.exe.config
+D:\QuanLyQuanCafe\src\CoffeeShopProject\CoffeeShopProject\bin\Debug\CoffeeShopProject.exe
+D:\QuanLyQuanCafe\src\CoffeeShopProject\CoffeeShopProject\bin\Debug\CoffeeShopProject.pdb
+D:\QuanLyQuanCafe\src\CoffeeShopProject\CoffeeShopProject\obj\Debug\CoffeeShopProject.csprojAssemblyReference.cache
+D:\QuanLyQuanCafe\src\CoffeeShopProject\CoffeeShopProject\obj\Debug\CoffeeShopProject.FormLogin.resources
+D:\QuanLyQuanCafe\src\CoffeeShopProject\CoffeeShopProject\obj\Debug\CoffeeShopProject.Properties.Resources.resources
+D:\QuanLyQuanCafe\src\CoffeeShopProject\CoffeeShopProject\obj\Debug\CoffeeShopProject.csproj.GenerateResource.cache
+D:\QuanLyQuanCafe\src\CoffeeShopProject\CoffeeShopProject\obj\Debug\CoffeeShopProject.csproj.CoreCompileInputs.cache
+D:\QuanLyQuanCafe\src\CoffeeShopProject\CoffeeShopProject\obj\Debug\CoffeeShopProject.exe
+D:\QuanLyQuanCafe\src\CoffeeShopProject\CoffeeShopProject\obj\Debug\CoffeeShopProject.pdb
+D:\QuanLyQuanCafe\src\CoffeeShopProject\CoffeeShopProject\obj\Debug\CoffeeShopProject.FormTableManager.resources
+D:\QuanLyQuanCafe\src\CoffeeShopProject\CoffeeShopProject\obj\Debug\CoffeeShopProject.FormAccountProfile.resources
+D:\QuanLyQuanCafe\src\CoffeeShopProject\CoffeeShopProject\obj\Debug\CoffeeShopProject.FormAdmin.resources

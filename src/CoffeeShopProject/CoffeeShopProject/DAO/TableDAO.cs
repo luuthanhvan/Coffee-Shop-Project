@@ -19,8 +19,8 @@ namespace CoffeeShopProject.DAO{
                     instance = new TableDAO();
 
                 return instance;
-            } 
-            private set => instance = value; 
+            }
+            set => instance = value;
         }
 
         private TableDAO() { }

@@ -69,28 +69,10 @@ CREATE TABLE BillDetails
 )
 GO
 
-INSERT INTO dbo.Account
-        ( UserName ,
-          DisplayName ,
-          PassWord ,
-          Type
-        )
-VALUES  ( N'ltvan' , -- UserName - nvarchar(100)
-          N'Luu Thanh Van' , -- DisplayName - nvarchar(100)
-          N'310799' , -- PassWord - nvarchar(1000)
-          1  -- Type - int
-        )
-INSERT INTO dbo.Account
-        ( UserName ,
-          DisplayName ,
-          PassWord ,
-          Type
-        )
-VALUES  ( N'tvan' , -- UserName - nvarchar(100)
-          N'Thanh Van' , -- DisplayName - nvarchar(100)
-          N'311999' , -- PassWord - nvarchar(1000)
-          0  -- Type - int
-        )
+INSERT INTO dbo.Account (UserName, DisplayName, PassWord, Type)
+VALUES  (N'ltvan', N'Luu Thanh Van', N'310799', 1)
+INSERT INTO dbo.Account (UserName, DisplayName, PassWord, Type)
+VALUES  (N'tvan', N'Thanh Van', N'311999', 0)
 GO
 
 CREATE PROC USP_GetAccountByUserName
@@ -117,6 +99,7 @@ GO
 EXEC dbo.USP_Login @userName = N'ltvan', @password = N'310799'
 GO
 
+-- add table food info
 DECLARE @i INT = 1
 WHILE @i <= 10
 BEGIN
@@ -134,3 +117,51 @@ GO
 
 EXEC dbo.USP_GetTableList
 GO
+
+-- add category
+INSERT dbo.FoodCategory (name) VALUES (N'Hải sản')
+INSERT dbo.FoodCategory (name) VALUES  (N'Nông sản')
+INSERT dbo.FoodCategory (name) VALUES  (N'Lâm sản')
+INSERT dbo.FoodCategory (name) VALUES  (N'Nước')
+GO
+
+-- add food
+INSERT dbo.Food (name, idCategory, price) VALUES  ( N'Mực một nắng nướng sa tế', 1, 120000)
+INSERT dbo.Food (name, idCategory, price) VALUES  ( N'Hào nướng', 1, 150000)
+INSERT dbo.Food (name, idCategory, price) VALUES  ( N'Lụa xào', 1, 50000)
+INSERT dbo.Food (name, idCategory, price) VALUES  (N'Nghêu hấp xả', 1, 50000)
+INSERT dbo.Food (name, idCategory, price) VALUES ( N'Thịt heo nướng sữa', 2, 60000)
+INSERT dbo.Food (name, idCategory, price) VALUES ( N'Heo rừng nướng muối ớt', 3, 75000)
+INSERT dbo.Food (name, idCategory, price) VALUES (N'7Up', 4, 15000)
+INSERT dbo.Food (name, idCategory, price) VALUES (N'Cafe', 4, 12000)
+INSERT dbo.Food (name, idCategory, price) VALUES (N'Cafe sữa', 4, 15000)
+INSERT dbo.Food (name, idCategory, price) VALUES (N'Đá chanh', 4, 6000)
+GO
+
+-- add bill
+INSERT dbo.Bill (DateCheckIn, DateCheckOut, idTable, status)
+VALUES  (GETDATE(), NULL, 3, 0)
+
+INSERT dbo.Bill (DateCheckIn, DateCheckOut, idTable, status)
+VALUES  (GETDATE(), NULL, 4, 0)
+
+INSERT dbo.Bill (DateCheckIn, DateCheckOut, idTable, status)
+VALUES  (GETDATE(), GETDATE(), 4, 1)
+
+INSERT dbo.Bill (DateCheckIn, DateCheckOut, idTable, status)
+VALUES  (GETDATE(), GETDATE(), 5, 1)
+GO
+
+-- add bill details
+INSERT	dbo.BillDetails (idBill, idFood, count) VALUES (1, 1, 2)
+INSERT	dbo.BillDetails (idBill, idFood, count) VALUES (1, 3, 4)
+INSERT	dbo.BillDetails (idBill, idFood, count) VALUES (1, 5, 1)
+INSERT	dbo.BillDetails (idBill, idFood, count) VALUES (2, 1, 2)
+INSERT	dbo.BillDetails (idBill, idFood, count) VALUES (2, 6, 2)
+INSERT	dbo.BillDetails (idBill, idFood, count) VALUES (3, 5, 2)     
+GO
+
+SELECT * FROM dbo.Food
+SELECT * FROM dbo.FoodCategory
+SELECT * FROM dbo.Bill
+SELECT * FROM dbo.BillDetails

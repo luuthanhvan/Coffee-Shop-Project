@@ -26,6 +26,10 @@ namespace CoffeeShopProject{
                 
                 // add table name for buttons
                 button.Text = table.Name + Environment.NewLine + table.Status;
+                
+                // add event for buttons
+                button.Click += Button_Click;
+                button.Tag = table;
 
                 switch (table.Status){
                     case "Trống":
@@ -40,10 +44,28 @@ namespace CoffeeShopProject{
                 this.flpTable.Controls.Add(button);
             }
         }
+        void showBill(int id){
+            this.lvBill.Items.Clear();
 
+            List<CoffeeShopProject.DTO.Menu> listBillDetails = MenuDAO.Instance.getListMenuByTable(id);
+
+            foreach(CoffeeShopProject.DTO.Menu item in listBillDetails){
+                ListViewItem listViewItem = new ListViewItem(item.FoodName.ToString());
+                listViewItem.SubItems.Add(item.Count.ToString());
+                listViewItem.SubItems.Add(item.Price.ToString());
+                listViewItem.SubItems.Add(item.TotalPrice.ToString());
+
+                this.lvBill.Items.Add(listViewItem);
+            }
+        }
         #endregion
 
         #region Events
+        private void Button_Click(object sender, EventArgs e){
+            int tableId = ((sender as Button).Tag as Table).ID;
+            showBill(tableId);
+        }
+
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e){
             this.Close();
         }

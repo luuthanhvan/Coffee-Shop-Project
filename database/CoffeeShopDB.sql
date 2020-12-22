@@ -116,3 +116,21 @@ GO
 -- test USP_Login Procedure
 EXEC dbo.USP_Login @userName = N'ltvan', @password = N'310799'
 GO
+
+DECLARE @i INT = 1
+WHILE @i <= 10
+BEGIN
+	INSERT dbo.TableFood (name) VALUES (N'Bàn ' + CAST(@i AS nvarchar(100)))
+	SET @i = @i + 1
+END
+GO
+
+CREATE PROC USP_GetTableList
+AS SELECT * FROM dbo.TableFood
+GO
+
+UPDATE dbo.TableFood SET status = N'Có người' WHERE id = 9
+GO
+
+EXEC dbo.USP_GetTableList
+GO

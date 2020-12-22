@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CoffeeShopProject.DAO{
-    class AccountDAO{
+    public class AccountDAO{
         private static AccountDAO instance;
 
         public static AccountDAO Instance{
@@ -15,12 +15,10 @@ namespace CoffeeShopProject.DAO{
                     instance = new AccountDAO();
                 return instance;
             }
-            private set{
-                instance = value;
-            }
+            private set => instance = value;
         }
 
-        public AccountDAO() { }
+        private AccountDAO() { }
 
         public bool login(string username, string password){
             string query = "EXEC dbo.USP_Login @username , @password";

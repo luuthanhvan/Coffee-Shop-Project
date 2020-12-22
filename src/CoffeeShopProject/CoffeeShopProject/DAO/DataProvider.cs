@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CoffeeShopProject.DAO{
-    class DataProvider{
+    public class DataProvider{
         // create an static instance -> through this instance, we can get/set data from database just only one connection
         private static DataProvider instance;
         public static DataProvider Instance{ // encapsulation instance
@@ -15,11 +15,9 @@ namespace CoffeeShopProject.DAO{
                 if (instance == null)
                     instance = new DataProvider();
                 
-                return DataProvider.instance;
+                return instance;
             }
-            private set { 
-                DataProvider.instance = value; 
-            }
+            private set => instance = value;
         }
 
         // constructor

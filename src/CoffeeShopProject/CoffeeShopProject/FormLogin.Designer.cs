@@ -66,6 +66,7 @@ namespace CoffeeShopProject
             // 
             // btnExit
             // 
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.Location = new System.Drawing.Point(408, 138);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
@@ -90,6 +91,7 @@ namespace CoffeeShopProject
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(331, 26);
             this.txtPassword.TabIndex = 1;
+            this.txtPassword.Text = "310799";
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // lbPassword
@@ -118,6 +120,7 @@ namespace CoffeeShopProject
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(331, 26);
             this.txtUsername.TabIndex = 1;
+            this.txtUsername.Text = "ltvan";
             // 
             // lbUsername
             // 

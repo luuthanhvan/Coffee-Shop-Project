@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CoffeeShopProject.DAO;
+using CoffeeShopProject.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +14,36 @@ namespace CoffeeShopProject{
     public partial class FormTableManager : Form{
         public FormTableManager(){
             InitializeComponent();
+            loadTable();
         }
+
+        #region Methods
+        
+        void loadTable(){
+            List<Table> listTable = TableDAO.Instance.loadTableList();
+            foreach(Table table in listTable){
+                Button button = new Button() { Width = TableDAO.tableWidth, Height = TableDAO.tableHeigh };
+                
+                // add table name for buttons
+                button.Text = table.Name + Environment.NewLine + table.Status;
+
+                switch (table.Status){
+                    case "Trống":
+                        button.BackColor = Color.LightGreen;
+                        break;
+                    default:
+                        button.BackColor = Color.LightPink;
+                        break;
+                }
+
+                // add buttons to flow layout panel Table
+                this.flpTable.Controls.Add(button);
+            }
+        }
+
+        #endregion
+
+        #region Events
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e){
             this.Close();
         }
@@ -26,5 +57,6 @@ namespace CoffeeShopProject{
             FormAdmin f = new FormAdmin();
             f.ShowDialog();
         }
+        #endregion
     }
 }

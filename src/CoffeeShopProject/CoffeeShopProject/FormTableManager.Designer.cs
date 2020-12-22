@@ -29,7 +29,7 @@ namespace CoffeeShopProject
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
             this.menuBar = new System.Windows.Forms.MenuStrip();
             this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,12 +56,12 @@ namespace CoffeeShopProject
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // flpTable
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(13, 39);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(459, 436);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.flpTable.Location = new System.Drawing.Point(13, 39);
+            this.flpTable.Name = "flpTable";
+            this.flpTable.Size = new System.Drawing.Size(459, 436);
+            this.flpTable.TabIndex = 0;
             // 
             // menuBar
             // 
@@ -93,14 +93,14 @@ namespace CoffeeShopProject
             // personalInfoToolStripMenuItem
             // 
             this.personalInfoToolStripMenuItem.Name = "personalInfoToolStripMenuItem";
-            this.personalInfoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.personalInfoToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.personalInfoToolStripMenuItem.Text = "Thông tin cá nhân";
             this.personalInfoToolStripMenuItem.Click += new System.EventHandler(this.personalInfoToolStripMenuItem_Click);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.logoutToolStripMenuItem.Text = "Đăng xuất";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
@@ -238,7 +238,7 @@ namespace CoffeeShopProject
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.flpTable);
             this.Controls.Add(this.menuBar);
             this.MainMenuStrip = this.menuBar;
             this.Name = "FormTableManager";
@@ -258,7 +258,7 @@ namespace CoffeeShopProject
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flpTable;
         private System.Windows.Forms.MenuStrip menuBar;
         private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem accInfoToolStripMenuItem;

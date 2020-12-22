@@ -14,7 +14,6 @@ namespace CoffeeShopProject{
         public FormLogin(){
             InitializeComponent();
         }
-
         private void btnLogin_Click(object sender, EventArgs e){
             string username = this.txtUsername.Text;
             string password = this.txtPassword.Text;
@@ -29,15 +28,12 @@ namespace CoffeeShopProject{
                 MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!");
             }
         }
-
         bool login(string username, string password){
             return AccountDAO.Instance.login(username, password);
         }
-
         private void btnExit_Click(object sender, EventArgs e){
             Application.Exit();
         }
-
         private void FormLogin_FormClosing(object sender, FormClosingEventArgs e){
             if (MessageBox.Show("Bạn có thực sự muốn thoát chương trình?", "Thông báo", MessageBoxButtons.YesNo) != System.Windows.Forms.DialogResult.Yes ){
                 e.Cancel = true;

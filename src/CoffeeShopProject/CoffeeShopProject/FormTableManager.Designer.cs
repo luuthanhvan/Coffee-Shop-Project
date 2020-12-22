@@ -41,6 +41,7 @@ namespace CoffeeShopProject
             this.cbFood = new System.Windows.Forms.ComboBox();
             this.cbFoodCategory = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtTotalPrice = new System.Windows.Forms.TextBox();
             this.btnSwitchTable = new System.Windows.Forms.Button();
             this.nmDiscount = new System.Windows.Forms.NumericUpDown();
             this.btnDiscount = new System.Windows.Forms.Button();
@@ -145,6 +146,7 @@ namespace CoffeeShopProject
             this.btnAddFood.TabIndex = 2;
             this.btnAddFood.Text = "Thêm món";
             this.btnAddFood.UseVisualStyleBackColor = true;
+            this.btnAddFood.Click += new System.EventHandler(this.btnAddFood_Click);
             // 
             // cbFood
             // 
@@ -161,9 +163,11 @@ namespace CoffeeShopProject
             this.cbFoodCategory.Name = "cbFoodCategory";
             this.cbFoodCategory.Size = new System.Drawing.Size(265, 21);
             this.cbFoodCategory.TabIndex = 0;
+            this.cbFoodCategory.SelectedIndexChanged += new System.EventHandler(this.cbFoodCategory_SelectedIndexChanged);
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.txtTotalPrice);
             this.panel2.Controls.Add(this.btnSwitchTable);
             this.panel2.Controls.Add(this.nmDiscount);
             this.panel2.Controls.Add(this.btnDiscount);
@@ -173,6 +177,18 @@ namespace CoffeeShopProject
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(419, 57);
             this.panel2.TabIndex = 3;
+            // 
+            // txtTotalPrice
+            // 
+            this.txtTotalPrice.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalPrice.ForeColor = System.Drawing.Color.Red;
+            this.txtTotalPrice.Location = new System.Drawing.Point(224, 18);
+            this.txtTotalPrice.Name = "txtTotalPrice";
+            this.txtTotalPrice.ReadOnly = true;
+            this.txtTotalPrice.Size = new System.Drawing.Size(111, 25);
+            this.txtTotalPrice.TabIndex = 6;
+            this.txtTotalPrice.Text = "0";
+            this.txtTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnSwitchTable
             // 
@@ -185,7 +201,7 @@ namespace CoffeeShopProject
             // 
             // nmDiscount
             // 
-            this.nmDiscount.Location = new System.Drawing.Point(194, 34);
+            this.nmDiscount.Location = new System.Drawing.Point(142, 34);
             this.nmDiscount.Name = "nmDiscount";
             this.nmDiscount.Size = new System.Drawing.Size(75, 20);
             this.nmDiscount.TabIndex = 4;
@@ -193,7 +209,7 @@ namespace CoffeeShopProject
             // 
             // btnDiscount
             // 
-            this.btnDiscount.Location = new System.Drawing.Point(194, 5);
+            this.btnDiscount.Location = new System.Drawing.Point(142, 5);
             this.btnDiscount.Name = "btnDiscount";
             this.btnDiscount.Size = new System.Drawing.Size(75, 23);
             this.btnDiscount.TabIndex = 3;
@@ -277,6 +293,7 @@ namespace CoffeeShopProject
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nmFoodCount)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmDiscount)).EndInit();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -309,5 +326,6 @@ namespace CoffeeShopProject
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.TextBox txtTotalPrice;
     }
 }

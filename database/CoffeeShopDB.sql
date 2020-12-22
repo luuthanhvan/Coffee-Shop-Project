@@ -161,7 +161,48 @@ INSERT	dbo.BillDetails (idBill, idFood, count) VALUES (2, 6, 2)
 INSERT	dbo.BillDetails (idBill, idFood, count) VALUES (3, 5, 2)     
 GO
 
-SELECT * FROM dbo.Food
 SELECT * FROM dbo.FoodCategory
+SELECT * FROM dbo.Food
 SELECT * FROM dbo.Bill
 SELECT * FROM dbo.BillDetails
+
+SELECT * FROM dbo.Bill, dbo.BillDetails, dbo.Food
+WHERE dbo.Bill.id = dbo.BillDetails.idBill
+AND dbo.BillDetails.idFood = dbo.Food.id
+AND dbo.Bill.status = 0
+GO
+
+CREATE PROC USP_InsertBill
+@idTable INT
+AS
+BEGIN
+	INSERT dbo.Bill (DateCheckIn, DateCheckOut, idTable, status) 
+	VALUES(GETDATE(), NULL, @idTable, 0)
+END
+GO
+
+ALTER PROC USP_InsertBillDetails
+@idBill INT, @idFood INT, @count INT
+AS
+BEGIN
+	DECLARE @isExistedBillDetails INT
+	DECLARE @foodCount INT = 1
+
+	SELECT @isExistedBillDetails = id, @foodCount = dbo.BillDetails.count
+	FROM dbo.BillDetails WHERE idBill = @idBill AND idFood = @idFood
+
+	IF (@isExistedBillDetails > 0)
+	BEGIN
+		DECLARE @newCount INT = @foodCount + @count
+		IF (@newCount > 0)
+			UPDATE dbo.BillDetails SET count = @newCount WHERE idFood = @idFood
+		ELSE
+			DELETE dbo.BillDetails WHERE idBill = @idBill AND idFood = @idFood
+
+	END
+	ELSE
+	BEGIN
+		INSERT dbo.BillDetails (idBill, idFood, count) VALUES (@idBill, @idFood, @count)
+	END
+END
+GO

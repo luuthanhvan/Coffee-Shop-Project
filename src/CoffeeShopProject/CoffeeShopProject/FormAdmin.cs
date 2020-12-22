@@ -15,7 +15,6 @@ namespace CoffeeShopProject{
             InitializeComponent();
             loadAccountList();
         }
-
         void loadAccountList(){
             string query = "EXEC dbo.USP_GetAccountByUserName @userName";
 

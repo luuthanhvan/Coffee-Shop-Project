@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 namespace CoffeeShopProject.DAO{
     public class BillDetailsDAO{
         private static BillDetailsDAO instance;
-
         public static BillDetailsDAO Instance { 
             get {
                 if (instance == null)
@@ -19,21 +18,23 @@ namespace CoffeeShopProject.DAO{
             }
             set => instance = value; 
         }
-
         private BillDetailsDAO() { }
-
-        public List<BillDetails> getListBillDetails(int id){
-            List<BillDetails> listBillDetails = new List<BillDetails>();
+        public List<BillDetails> getListOfBillDetails(int id){
+            List<BillDetails> listOfBillDetails = new List<BillDetails>();
 
             string query = "SELECT * FROM dbo.BillDetails WHERE idBill = " + id +"";
             DataTable data = DataProvider.Instance.executeQuery(query);
 
             foreach(DataRow item in data.Rows){
                 BillDetails billDetails = new BillDetails(item);
-                listBillDetails.Add(billDetails);
+                listOfBillDetails.Add(billDetails);
             }
 
-            return listBillDetails;
+            return listOfBillDetails;
+        }
+        public void insertBillDetails(int billId, int foodId, int count){
+            string query = "EXEC USP_InsertBillDetails @idBill , @idFood , @count";
+            DataProvider.Instance.executeNonQuery(query, new object[] { billId, foodId, count});
         }
     }
 }

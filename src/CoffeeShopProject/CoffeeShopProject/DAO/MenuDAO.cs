@@ -25,7 +25,7 @@ namespace CoffeeShopProject.DAO{
         public List<Menu> getListMenuByTable(int id){
             List<Menu> listMenu = new List<Menu>();
 
-            string query = "SELECT dbo.Food.name, dbo.BillDetails.count, dbo.Food.price, dbo.Food.price*dbo.BillDetails.count as totalPrice FROM dbo.Bill, dbo.BillDetails, dbo.Food WHERE dbo.Bill.id = dbo.BillDetails.idBill AND dbo.BillDetails.idFood = dbo.Food.id AND dbo.Bill.idTable = " + id +"";
+            string query = "SELECT dbo.Food.name, dbo.BillDetails.count, dbo.Food.price, dbo.Food.price*dbo.BillDetails.count as totalPrice FROM dbo.Bill, dbo.BillDetails, dbo.Food WHERE dbo.Bill.id = dbo.BillDetails.idBill AND dbo.BillDetails.idFood = dbo.Food.id AND dbo.Bill.status = 0 AND dbo.Bill.idTable = " + id +"";
 
             DataTable data = DataProvider.Instance.executeQuery(query);
 

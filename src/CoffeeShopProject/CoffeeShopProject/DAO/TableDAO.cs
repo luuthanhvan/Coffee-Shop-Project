@@ -8,11 +8,9 @@ using System.Threading.Tasks;
 
 namespace CoffeeShopProject.DAO{
     public class TableDAO{
-
         private static TableDAO instance;
         public static int tableWidth = 80;
         public static int tableHeigh = 80;
-
         public static TableDAO Instance { 
             get {
                 if (instance == null)
@@ -22,11 +20,9 @@ namespace CoffeeShopProject.DAO{
             }
             set => instance = value;
         }
-
         private TableDAO() { }
-
         public List<Table> loadTableList(){
-            List<Table> listTable = new List<Table>();
+            List<Table> listOfTables = new List<Table>();
 
             string query = "EXEC dbo.USP_GetTableList";
             DataTable data = DataProvider.Instance.executeQuery(query);
@@ -34,10 +30,10 @@ namespace CoffeeShopProject.DAO{
             // convert DataTable to List<Table>
             foreach(DataRow item in data.Rows){
                 Table table = new Table(item);
-                listTable.Add(table);
+                listOfTables.Add(table);
             }
 
-            return listTable;
+            return listOfTables;
          }
     }
 }

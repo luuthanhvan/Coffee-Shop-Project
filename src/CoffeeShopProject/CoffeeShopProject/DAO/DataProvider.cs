@@ -11,7 +11,7 @@ namespace CoffeeShopProject.DAO{
         // create an static instance -> through this instance, we can get/set data from database just only one connection
         private static DataProvider instance;
         public static DataProvider Instance{ // encapsulation instance
-            get{
+            get {
                 if (instance == null)
                     instance = new DataProvider();
                 

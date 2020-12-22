@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CoffeeShopProject.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,10 +16,22 @@ namespace CoffeeShopProject{
         }
 
         private void btnLogin_Click(object sender, EventArgs e){
-            FormTableManager f = new FormTableManager();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+            string username = this.txtUsername.Text;
+            string password = this.txtPassword.Text;
+
+            if(login(username, password)){
+                FormTableManager f = new FormTableManager();
+                this.Hide();
+                f.ShowDialog();
+                this.Show();
+            }
+            else{
+                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!");
+            }
+        }
+
+        bool login(string username, string password){
+            return AccountDAO.Instance.login(username, password);
         }
 
         private void btnExit_Click(object sender, EventArgs e){

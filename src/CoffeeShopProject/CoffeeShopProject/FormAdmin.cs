@@ -19,7 +19,7 @@ namespace CoffeeShopProject{
         void loadAccountList(){
             string query = "EXEC dbo.USP_GetAccountByUserName @userName";
 
-            this.dtgvAccount.DataSource = DataProvider.Instance.executeQuery(query, new object[] {"ltvan"});
+            this.dtgvAccount.DataSource = DataProvider.Instance.executeQuery(query, new object[] {"tvan"});
         }
     }
 }

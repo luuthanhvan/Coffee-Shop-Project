@@ -101,4 +101,18 @@ BEGIN
 END
 GO
 
-EXEC dbo.USP_GetAccountByUserName @userName = N'ltvan' -- nvarchar(100)
+-- test USP_GetAccountByUserName Procedure
+EXEC dbo.USP_GetAccountByUserName @userName = N'ltvan'
+GO
+
+CREATE PROC USP_Login
+@username nvarchar(100), @password nvarchar(100)
+AS
+BEGIN
+	SELECT * FROM dbo.Account WHERE UserName = @username AND PassWord = @password
+END
+GO
+
+-- test USP_Login Procedure
+EXEC dbo.USP_Login @userName = N'ltvan', @password = N'310799'
+GO

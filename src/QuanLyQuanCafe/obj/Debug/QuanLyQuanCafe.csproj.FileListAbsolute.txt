@@ -1,0 +1,48 @@
+D:\PTUD_WINDOWS\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\QuanLyQuanCafe.exe.config
+D:\PTUD_WINDOWS\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\QuanLyQuanCafe.exe
+D:\PTUD_WINDOWS\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\QuanLyQuanCafe.pdb
+D:\PTUD_WINDOWS\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.frmLogin.resources
+D:\PTUD_WINDOWS\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.Properties.Resources.resources
+D:\PTUD_WINDOWS\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.csproj.GenerateResource.Cache
+D:\PTUD_WINDOWS\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.exe
+D:\PTUD_WINDOWS\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.pdb
+D:\PTUD_WINDOWS\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.frmTableManager.resources
+D:\PTUD_WINDOWS\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.csprojResolveAssemblyReference.cache
+D:\PTUD_WINDOWS\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.frmAccountProfile.resources
+D:\PTUD_WINDOWS\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.frmAdmin.resources
+D:\PTUD_WINDOWS\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.Help.resources
+D:\PTUD_WINDOWS\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.Salary.resources
+D:\Application Development for Windows\baocao\backup\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\QuanLyQuanCafe.exe.config
+D:\Application Development for Windows\baocao\backup\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\QuanLyQuanCafe.exe
+D:\Application Development for Windows\baocao\backup\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\QuanLyQuanCafe.pdb
+D:\Application Development for Windows\baocao\backup\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Application Development for Windows\baocao\backup\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.csprojAssemblyReference.cache
+D:\Application Development for Windows\baocao\backup\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.frmAccountProfile.resources
+D:\Application Development for Windows\baocao\backup\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.frmAdmin.resources
+D:\Application Development for Windows\baocao\backup\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.frmLogin.resources
+D:\Application Development for Windows\baocao\backup\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.frmTableManager.resources
+D:\Application Development for Windows\baocao\backup\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.Help.resources
+D:\Application Development for Windows\baocao\backup\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.Properties.Resources.resources
+D:\Application Development for Windows\baocao\backup\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.Salary.resources
+D:\Application Development for Windows\baocao\backup\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.csproj.GenerateResource.cache
+D:\Application Development for Windows\baocao\backup\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.csproj.CoreCompileInputs.cache
+D:\Application Development for Windows\baocao\backup\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.csproj.CopyComplete
+D:\Application Development for Windows\baocao\backup\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.exe
+D:\Application Development for Windows\baocao\backup\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.pdb
+D:\QuanLyQuanCafe\src\QuanLyQuanCafe\bin\Debug\QuanLyQuanCafe.exe.config
+D:\QuanLyQuanCafe\src\QuanLyQuanCafe\bin\Debug\QuanLyQuanCafe.exe
+D:\QuanLyQuanCafe\src\QuanLyQuanCafe\bin\Debug\QuanLyQuanCafe.pdb
+D:\QuanLyQuanCafe\src\QuanLyQuanCafe\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\QuanLyQuanCafe\src\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.csprojAssemblyReference.cache
+D:\QuanLyQuanCafe\src\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.frmAccountProfile.resources
+D:\QuanLyQuanCafe\src\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.frmAdmin.resources
+D:\QuanLyQuanCafe\src\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.frmLogin.resources
+D:\QuanLyQuanCafe\src\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.frmTableManager.resources
+D:\QuanLyQuanCafe\src\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.Help.resources
+D:\QuanLyQuanCafe\src\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.Properties.Resources.resources
+D:\QuanLyQuanCafe\src\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.Salary.resources
+D:\QuanLyQuanCafe\src\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.csproj.GenerateResource.cache
+D:\QuanLyQuanCafe\src\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.csproj.CoreCompileInputs.cache
+D:\QuanLyQuanCafe\src\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.csproj.CopyComplete
+D:\QuanLyQuanCafe\src\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.exe
+D:\QuanLyQuanCafe\src\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.pdb
